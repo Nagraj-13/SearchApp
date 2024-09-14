@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import SearchCountry from './components/SearchCountry';
+import './App.css'; // Ensure Tailwind CSS is included
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-gray-100 min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow flex  mt-5 md:mt-10">
+        <SearchCountry />
+      </main>
     </div>
   );
 }
